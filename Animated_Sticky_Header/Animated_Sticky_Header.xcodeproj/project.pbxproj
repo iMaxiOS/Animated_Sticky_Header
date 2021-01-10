@@ -11,6 +11,12 @@
 		AC32C5A125AB00A3006870DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32C5A025AB00A3006870DE /* ContentView.swift */; };
 		AC32C5A325AB00A5006870DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32C5A225AB00A5006870DE /* Assets.xcassets */; };
 		AC32C5A625AB00A5006870DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32C5A525AB00A5006870DE /* Preview Assets.xcassets */; };
+		AC32C5B425AB0133006870DE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32C5B325AB0133006870DE /* Home.swift */; };
+		AC58106225AB05E9005DB50D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58106125AB05E9005DB50D /* HeaderView.swift */; };
+		AC58106525AB092E005DB50D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58106425AB092E005DB50D /* Tab.swift */; };
+		AC58106825AB0E34005DB50D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58106725AB0E34005DB50D /* HomeViewModel.swift */; };
+		ACFC3B4925AB01F200E4D4B3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC3B4825AB01F200E4D4B3 /* Food.swift */; };
+		ACFC3B4D25AB03BB00E4D4B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC3B4C25AB03BB00E4D4B3 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		AC32C5A225AB00A5006870DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC32C5A525AB00A5006870DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC32C5A725AB00A5006870DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC32C5B325AB0133006870DE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AC58106125AB05E9005DB50D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AC58106425AB092E005DB50D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		AC58106725AB0E34005DB50D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		ACFC3B4825AB01F200E4D4B3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		ACFC3B4C25AB03BB00E4D4B3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				AC32C59E25AB00A3006870DE /* Animated_Sticky_HeaderApp.swift */,
-				AC32C5A025AB00A3006870DE /* ContentView.swift */,
+				AC32C5B225AB011E006870DE /* ViewModel */,
+				AC32C5B125AB0119006870DE /* Model */,
+				AC32C5B025AB0113006870DE /* View */,
 				AC32C5A225AB00A5006870DE /* Assets.xcassets */,
 				AC32C5A725AB00A5006870DE /* Info.plist */,
 				AC32C5A425AB00A5006870DE /* Preview Content */,
@@ -67,6 +81,34 @@
 				AC32C5A525AB00A5006870DE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC32C5B025AB0113006870DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC32C5A025AB00A3006870DE /* ContentView.swift */,
+				AC32C5B325AB0133006870DE /* Home.swift */,
+				ACFC3B4C25AB03BB00E4D4B3 /* CardView.swift */,
+				AC58106125AB05E9005DB50D /* HeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC32C5B125AB0119006870DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACFC3B4825AB01F200E4D4B3 /* Food.swift */,
+				AC58106425AB092E005DB50D /* Tab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC32C5B225AB011E006870DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC58106725AB0E34005DB50D /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC32C5A125AB00A3006870DE /* ContentView.swift in Sources */,
+				AC58106225AB05E9005DB50D /* HeaderView.swift in Sources */,
+				AC32C5B425AB0133006870DE /* Home.swift in Sources */,
+				AC58106825AB0E34005DB50D /* HomeViewModel.swift in Sources */,
 				AC32C59F25AB00A3006870DE /* Animated_Sticky_HeaderApp.swift in Sources */,
+				ACFC3B4925AB01F200E4D4B3 /* Food.swift in Sources */,
+				ACFC3B4D25AB03BB00E4D4B3 /* CardView.swift in Sources */,
+				AC58106525AB092E005DB50D /* Tab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Animated_Sticky_Header/Preview Content\"";
-				DEVELOPMENT_TEAM = R4XB56HC9M;
+				DEVELOPMENT_TEAM = 224SJKKLQ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Animated_Sticky_Header/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -291,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Animated_Sticky_Header/Preview Content\"";
-				DEVELOPMENT_TEAM = R4XB56HC9M;
+				DEVELOPMENT_TEAM = 224SJKKLQ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Animated_Sticky_Header/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
