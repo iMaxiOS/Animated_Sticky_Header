@@ -9,37 +9,38 @@ import SwiftUI
 
 struct Home: View {
     
-    @StateObject var homeModel = HomeViewModel()
+    @StateObject var homeData = HomeViewModel()
+    @Environment(\.colorScheme) var scheme
     
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 15, pinnedViews: [.sectionHeaders], content: {
-                
-                GeometryReader { reader -> AnyView in
+                GeometryReader{reader -> AnyView in
                     let offset = reader.frame(in: .global).minY
                     
                     if -offset >= 0 {
                         DispatchQueue.main.async {
-                            self.homeModel.offset = -offset
+                            self.homeData.offset = -offset
                         }
                     }
+                    
                     return AnyView(
                         Image("choclates")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset : 0))
                             .cornerRadius(2)
-                            .offset(y: offset > 0 ? -offset : 0)
+                            .offset(y: (offset > 0 ? -offset : 0))
                     )
                 }
                 .frame(height: 250)
                 
                 Section(header: HeaderView()) {
-                    ForEach(tabsItems) { tab in
+                    ForEach(tabsItems){tab in
                         VStack(alignment: .leading, spacing: 15, content: {
                             Text(tab.tab)
                                 .font(.title2)
-                                .bold()
+                                .fontWeight(.bold)
                                 .padding(.bottom)
                                 .padding(.leading)
                             
@@ -50,18 +51,18 @@ struct Home: View {
                             Divider()
                                 .padding(.top)
                         })
-                    }
+                        .tag(tab.tab)                    }
                 }
             })
         }
         .overlay(
-            Color(.systemBackground)
+            (scheme == .dark ? Color.black : Color.white)
                 .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
                 .ignoresSafeArea(.all, edges: .top)
-                .opacity(self.homeModel.offset > 250 ? 1 : 0),
-            alignment: .top
+                .opacity(homeData.offset > 250 ? 1 : 0)
+            ,alignment: .top
         )
-        .environmentObject(homeModel)
+        .environmentObject(homeData)
     }
 }
 

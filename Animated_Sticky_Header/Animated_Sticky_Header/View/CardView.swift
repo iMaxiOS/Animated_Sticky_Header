@@ -15,13 +15,14 @@ struct CardView: View {
         HStack {
             VStack(alignment: .leading, spacing: 10, content: {
                 Text(food.title)
-                    .font(.title2)
-                    .bold()
+                    .fontWeight(.bold)
+                
                 Text(food.description)
                     .font(.caption)
                     .lineLimit(3)
+                
                 Text(food.price)
-                    .bold()
+                    .fontWeight(.bold)
             })
             
             Spacer(minLength: 10)
